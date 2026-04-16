@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  common-library-int:
+    image: common-library:int
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tags:
+      - common-library:int
+    environment:
+      - SPRING_PROFILES_ACTIVE=int
+
+  common-library-uat:
+    image: common-library:uat
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tags:
+      - common-library:uat
+    environment:
+      - SPRING_PROFILES_ACTIVE=uat
+
+  common-library-prod:
+    image: common-library:prod
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tags:
+      - common-library:prod
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+
