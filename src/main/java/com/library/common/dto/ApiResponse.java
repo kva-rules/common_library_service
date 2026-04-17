@@ -18,9 +18,10 @@ import java.time.LocalDateTime;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ApiResponse<T> {
 
-    private LocalDateTime timestamp;
-    private int status;
+    private boolean success;
     private String message;
     private T data;
+    private LocalDateTime timestamp;
+    private int status;
 }
 

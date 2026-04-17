@@ -5,6 +5,8 @@ package com.library.common.enums;
  */
 public enum UserRole {
     ADMIN,
+    USER,
+    CONTRIBUTOR,
     MANAGER,
     ENGINEER
 }
