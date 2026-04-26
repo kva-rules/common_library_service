@@ -1,4 +1,4 @@
-FROM maven:3.9.9-eclipse-temurin-17 as builder
+FROM maven:3.9.9-eclipse-temurin-21 as builder
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Runtime stage - just extract JAR artifact (no app server needed)
-FROM eclipse-temurin:17-jre-alpine as artifact
+FROM eclipse-temurin:21-jre-alpine as artifact
 
 WORKDIR /app
 
