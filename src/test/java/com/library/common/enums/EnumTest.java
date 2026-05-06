@@ -8,7 +8,7 @@ class EnumTest {
 
     @Test
     void userRoleValues() {
-        assertEquals(3, UserRole.values().length);
+        assertEquals(5, UserRole.values().length);
         assertEquals(UserRole.ADMIN, UserRole.valueOf("ADMIN"));
         assertThrows(IllegalArgumentException.class, () -> UserRole.valueOf("INVALID"));
     }

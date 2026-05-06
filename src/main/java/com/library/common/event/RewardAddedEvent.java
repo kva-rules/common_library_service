@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class RewardAddedEvent implements Serializable {
     private static final long serialVersionUID = 1L;
     
-    private Long userId;
+    private String userId;
     private Integer points;
     private String reason;
 }

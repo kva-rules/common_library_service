@@ -6,19 +6,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.List;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SolutionApprovedEvent implements Serializable {
-    private static final long serialVersionUID = 2L;
+public class SolutionSubmittedEvent implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     private String solutionId;
     private String ticketId;
-    private List<String> contributorIds;
-    private String difficulty;
-    private String solutionText;
+    private String createdBy;
     private String solutionTitle;
 }
